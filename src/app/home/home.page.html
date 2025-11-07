@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titulo-centrado">GPS Demo</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleDarkMode()" fill="clear" aria-label="Modo oscuro / claro">
+        <ion-icon slot="icon-only" [name]="darkMode ? 'sunny-outline' : 'moon-outline'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center-card">
+    <div class="responsive-card">
+      <div class="custom-header">
+        <div class="custom-title">Ubicación actual</div>
+        <div class="custom-subtitle">Datos en tiempo real</div>
+      </div>
+      <div class="datos-box">
+        <div>
+          <span class="label-title">Latitud</span>
+          <span class="value">{{ lat !== undefined ? lat : 'Sin datos' }}</span>
+        </div>
+        <hr />
+        <div>
+          <span class="label-title">Longitud</span>
+          <span class="value">{{ lng !== undefined ? lng : 'Sin datos' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

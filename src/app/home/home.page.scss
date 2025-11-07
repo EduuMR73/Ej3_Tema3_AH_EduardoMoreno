@@ -1,0 +1,144 @@
+ion-header, ion-toolbar {
+  z-index: 99 !important;
+  position: relative;
+  margin-top: env(safe-area-inset-top, 20px); /* protección barra estado */
+  background: #222;
+}
+
+@media (max-width: 600px) {
+  ion-header, ion-toolbar {
+    margin-top: env(safe-area-inset-top, 25px);
+  }
+}
+
+ion-title.titulo-centrado {
+  font-size: 1.08em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 48px;
+}
+
+ion-buttons[slot="end"] {
+  z-index: 110;
+}
+
+ion-content {
+  --background: #f0f4f9;
+}
+
+.center-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 75vh;
+  padding-top: 8vh;
+}
+
+.responsive-card {
+  width: 420px;
+  max-width: 95vw;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 4px 24px rgba(68,126,234,0.12), 0 1.5px 6px rgba(38,50,56,0.10);
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .center-card {
+    padding-top: 3vh;
+    min-height: 64vh;
+  }
+  .responsive-card {
+    width: 97vw;
+    min-width: 0;
+  }
+}
+
+.custom-header {
+  background: #447eea;
+  padding-top: 18px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-radius: 22px 22px 0 0;
+}
+
+.custom-title {
+  font-size: 1.21em;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.custom-subtitle {
+  font-size: 1em;
+  color: #dbe9fd;
+  margin-top: 5px;
+}
+
+.datos-box {
+  padding: 15px 22px 24px 22px;
+  background: #f6f8fe;
+  border-radius: 0 0 22px 22px;
+}
+
+.datos-box > div {
+  margin-bottom: 14px;
+}
+
+.label-title {
+  display: block;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.value {
+  display: block;
+  color: #2553ed;
+  font-size: 1.15em;
+  font-family: monospace;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #b4bee6;
+  margin: 12px 0;
+}
+
+body.dark {
+  ion-content {
+    --background: #12171f;
+  }
+  .responsive-card {
+    background: #1a2332;
+    color: #fff;
+  }
+  .custom-header {
+    background: #264d8c;
+    color: #fff;
+  }
+  .custom-title,
+  .custom-subtitle {
+    color: #afd3ff;
+  }
+  .label-title {
+    color: #fff;
+  }
+  .value {
+    color: #7fb4fe;
+  }
+  .datos-box {
+    background: #203159;
+  }
+  hr {
+    border-top: 1px solid #375083;
+  }
+}
